@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.krystofrapp.limelightbeauty">
+
+    <application
+        android:allowBackup="true"
+        android:fullBackupContent="true"
+        android:icon="@drawable/bg5"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/bg5"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MoMoPayment"
+            android:label="MTN•Mobile•Money"
+            android:parentActivityName=".PaymentGateway" />
+        <activity
+            android:name=".OmPayment"
+            android:label="Orange•Money"
+            android:parentActivityName=".PaymentGateway" />
+        <activity
+            android:name=".PaymentGateway"
+            android:label="Payment•Gateway"
+            android:parentActivityName=".PayerInfo" />
+        <activity
+            android:name=".PayerInfo"
+            android:label="Payer•Credentials"
+            android:parentActivityName=".BookAppointment" />
+        <activity android:name=".StartPage">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".BookAppointment"
+            android:label="Book•Appointment"
+            android:parentActivityName=".ItemsPreviewActivity" />
+        <activity android:name=".ServicesActivity" />
+        <activity
+            android:name=".ui.account.UpdatePassword"
+            android:parentActivityName=".ui.account.AccountFragment" />
+        <activity
+            android:name=".ui.account.AccountFragment"
+            android:label="Account"
+            android:parentActivityName=".Homepage" />
+        <activity
+            android:name=".ui.account.UpgradeAccount"
+            android:label="Upgrade•Account"
+            android:parentActivityName=".ui.account.AccountFragment" />
+        <activity
+            android:name=".ui.account.Profile"
+            android:label="Profile"
+            android:parentActivityName=".ui.account.AccountFragment" />
+        <activity
+            android:name=".Homepage"
+            android:label="@string/title_activity_homepage" />
+        <activity
+            android:name=".UserLogin"
+            android:label="Login"
+            android:parentActivityName=".StartPage" />
+        <activity
+            android:name=".SignUpPage"
+            android:label="Sign•Up"
+            android:parentActivityName=".StartPage" />
+        <activity android:name=".ui.cart.CartFragment" />
+        <activity android:name=".ui.home.HomeFragment" />
+        <activity android:name=".ui.services.ServicesFragment" />
+        <activity
+            android:name=".ItemsPreviewActivity"
+            android:label="Services"
+            android:parentActivityName=".Homepage" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+</manifest>

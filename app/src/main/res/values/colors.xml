@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F8558D</color>
+    <color name="colorPrimaryDark">#FB4684</color>
+    <color name="colorAccent">#F8558D</color>
+    <color name="color_white">#FFFFFF</color>
+    <color name="center_color">#F4E0E7</color>
+    <color name="overlay_pink">#2EEFB1C6</color>
+    <color name="overlay_pink2">#3BEDA9C0</color>
+    <color name="black">#000000</color>
+    <color name="gray">#5B5959</color>
+    <color name="purple">#5F0C4D</color>
+    <color name="overlay_purple">#21F14B8D</color>
+    <color name="brown">#610202</color>
+    <color name="magenta">#E91E63</color>
+    <color name="strong_magenta">#D70D51</color>
+    <color name="light_magenta">#F463DE</color>
+    <color name="blue">#9D6DF1</color>
+    <color name="fade_blue">#2C673AB7</color>
+    <color name="thick_blue">#22035A</color>
+    <color name="fb_blue">#283593</color>
+    <color name="opaque_purple">#5E5F0C4D</color>
+    <color name="light_pink">#FF65FF</color>
+    <color name="search_layover_bg">#50000000</color>
+    <color name="opaque">#09F664AB</color>
+    <color name="fade">#44101010</color>
+    <color name="OM">#FF5722</color>
+    <color name="MOMO">#FFC107</color>
+</resources>

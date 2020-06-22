@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:fitsSystemWindows="true"
+    tools:context=".UserLogin">
+
+    <TextView
+        android:id="@+id/tv_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:fontFamily="@font/lobster"
+        android:text="Login Below!"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textIsSelectable="true"
+        android:textSize="23sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@id/img"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/reset_pwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="false"
+        android:fontFamily="@font/gabriola"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="Forgot password?"
+        android:textColor="@color/colorAccent"
+        android:textSize="19sp"
+        app:layout_constraintEnd_toEndOf="@id/txt_pwd"
+        app:layout_constraintStart_toStartOf="@id/txt_pwd"
+        app:layout_constraintTop_toBottomOf="@id/txt_pwd" />
+
+    <TextView
+        android:id="@+id/to_sign_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="false"
+        android:fontFamily="@font/gabriola"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="Not registered yet? Sign Up"
+        android:textColor="@color/magenta"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@id/txt_pwd"
+        app:layout_constraintStart_toStartOf="@id/txt_pwd"
+        app:layout_constraintTop_toBottomOf="@id/customer_login" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:background="@drawable/bg7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:id="@+id/cl_progressbar"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="@id/to_sign_up"
+        app:layout_constraintStart_toStartOf="@id/to_sign_up"
+        app:layout_constraintTop_toBottomOf="@id/to_sign_up" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/customer_login"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="60dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="false"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/colorPrimaryDark"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="3dp"
+        app:layout_constraintLeft_toLeftOf="@+id/txt_pwd"
+        app:layout_constraintRight_toRightOf="@id/txt_pwd"
+        app:layout_constraintTop_toBottomOf="@id/txt_pwd">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/gabriola"
+                android:gravity="center"
+                android:text="Login"
+                android:textAllCaps="true"
+                android:textColor="@color/color_white"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt_pwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/edit_text"
+            android:drawableStart="@drawable/ic_pwd_confirm"
+            android:drawablePadding="6dp"
+            android:ems="8"
+            android:fontFamily="@font/gabriola"
+            android:hint="Password *"
+            android:inputType="textPassword"
+            android:paddingStart="10dp"
+            android:textColor="@color/gray"
+            android:textSize="19sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:textColorHint="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/edit_text"
+            android:drawableStart="@drawable/ic_email"
+            android:drawablePadding="6dp"
+            android:ems="8"
+            android:fontFamily="@font/gabriola"
+            android:hint="Email address *"
+            android:inputType="textEmailAddress"
+            android:paddingStart="10dp"
+            android:textColor="@color/gray"
+            android:textSize="19sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img"
+        android:layout_width="70dp"
+        android:layout_height="95dp"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/girl"
+        app:civ_border_color="@color/fade_blue"
+        app:civ_border_width="1dp"
+        app:civ_circle_background_color="@color/color_white"
+        app:layout_constraintBottom_toTopOf="@id/txt_email"
+        app:layout_constraintEnd_toStartOf="@id/txt_email"
+        app:layout_constraintStart_toEndOf="@id/txt_email" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--
+        <androidx.appcompat.widget.AppCompatRatingBar
+            android:layout_width="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:numStars="5"
+            android:rating="3.5"
+            android:scaleX="0.5"
+            style="?android:ratingBarStyleIndicator"
+            android:isIndicator="false"
+            android:scaleY="0.5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="wrap_content"/>
+            -->

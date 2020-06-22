@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.account.AccountFragment">
+
+    <RelativeLayout
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:background="@drawable/frgm_account_banner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:fontFamily="@font/gabriola"
+        android:text="My Account"
+        android:textColor="@color/colorAccent"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/toHome"
+        app:layout_constraintStart_toStartOf="@id/toHome"
+        app:layout_constraintTop_toTopOf="@id/toHome" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/profile_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/btn_main"
+        android:clickable="true"
+        android:elevation="10dp"
+        android:ems="5"
+        android:focusable="true"
+        android:focusableInTouchMode="false"
+        android:fontFamily="@font/gabriola"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="PROFILE"
+        android:textAllCaps="false"
+        android:textColor="@color/magenta"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        app:layout_constraintLeft_toLeftOf="@+id/banner"
+        app:layout_constraintRight_toRightOf="@id/banner"
+        app:layout_constraintTop_toBottomOf="@id/banner" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/settings_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/btn_main"
+        android:clickable="true"
+        android:elevation="10dp"
+        android:ems="5"
+        android:focusable="true"
+        android:focusableInTouchMode="false"
+        android:fontFamily="@font/gabriola"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="SETTINGS"
+        android:textAllCaps="false"
+        android:textColor="@color/magenta"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        app:layout_constraintLeft_toLeftOf="@+id/profile_btn"
+        app:layout_constraintRight_toRightOf="@id/profile_btn"
+        app:layout_constraintTop_toBottomOf="@id/profile_btn" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/update_pwd_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/btn_main"
+        android:clickable="true"
+        android:elevation="10dp"
+        android:ems="5"
+        android:focusable="true"
+        android:focusableInTouchMode="false"
+        android:fontFamily="@font/gabriola"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="UPDATE PASSWORD"
+        android:textAllCaps="false"
+        android:textColor="@color/magenta"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        app:layout_constraintLeft_toLeftOf="@+id/settings_btn"
+        app:layout_constraintRight_toRightOf="@id/settings_btn"
+        app:layout_constraintTop_toBottomOf="@id/settings_btn"
+
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/upgrade_acc_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/login_btn_bg"
+        android:clickable="true"
+        android:elevation="10dp"
+        android:ems="9"
+        android:focusable="true"
+        android:focusableInTouchMode="false"
+        android:fontFamily="@font/gabriola"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="UPGRADE TO BUSINESS ACCOUNT"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/color_white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@+id/update_pwd_btn"
+        app:layout_constraintRight_toRightOf="@id/update_pwd_btn"
+        app:layout_constraintTop_toBottomOf="@id/update_pwd_btn" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/logout"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/btn_main"
+        android:clickable="true"
+        android:elevation="10dp"
+        android:ems="4"
+        android:focusable="true"
+        android:focusableInTouchMode="false"
+        android:fontFamily="@font/gabriola"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="LOGOUT"
+        android:textAllCaps="false"
+        android:textColor="@color/magenta"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@+id/upgrade_acc_btn"
+        app:layout_constraintRight_toRightOf="@id/upgrade_acc_btn"
+        app:layout_constraintTop_toBottomOf="@id/upgrade_acc_btn" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/toHome"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/ic_leftarrow_accent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

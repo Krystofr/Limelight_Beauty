@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="0dp">
+
+    <RelativeLayout
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/background"
+        android:padding="5dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true" />
+
+        <com.viewpagerindicator.CirclePageIndicator
+            android:id="@+id/indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bg_overlay"
+            android:gravity="bottom"
+            android:padding="4dp"
+            app:centered="true"
+            app:fillColor="@color/colorAccent"
+            app:pageColor="@color/color_white"
+            app:snap="false" />
+
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/slider_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/slideview_bg"
+        app:layout_constraintBottom_toTopOf="@id/nav_view"
+        app:layout_constraintTop_toBottomOf="@id/banner">
+
+        <TextView
+            android:id="@+id/txt_top_ordered"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/gabriola"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="~ Top Ordered Items ~"
+            android:textColor="@color/purple"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_top_rated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@color/color_white"
+            android:fontFamily="@font/gabriola"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="~ Top Rated Services ~"
+            android:textColor="@color/purple"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/recycler_view_items2"
+            app:layout_constraintTop_toBottomOf="@id/recycler_view_items" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_items"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/color_white"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            app:layout_constraintTop_toBottomOf="@id/txt_top_ordered" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_items2"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/color_white"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            app:layout_constraintTop_toBottomOf="@id/txt_top_rated" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/bottom_bg"
+        app:itemIconTint="@color/color_white"
+        app:itemRippleColor="@color/light_pink"
+        app:itemTextColor="@color/color_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout><!--
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_slider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:elevation="6dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardCornerRadius="10dp">
+        <androidx.viewpager2.widget.ViewPager2
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:id="@+id/viewPagerImageSlider"
+            />
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+<ViewFlipper
+android:layout_width="match_parent"
+android:layout_height="300dp"
+android:autoStart="true"
+app:layout_constraintTop_toTopOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+android:flipInterval="5000">
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/limelight"/>
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/girl"/>
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/limelight1"/>
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/lime_light_stacked"/>
+
+</ViewFlipper>
+
+
+
+
+    <fragment
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toTopOf="@id/nav_view"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/mobile_navigation" />
+
+
+
+
+          <androidx.appcompat.widget.SearchView
+            android:id="@+id/search_view"
+            android:layout_width="310dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/btn_main"
+            android:drawableStart="@drawable/ic_cancel_black"
+            android:inputType="text"
+            app:closeIcon="@drawable/ic_cancel_black"
+            app:iconifiedByDefault="false"
+            app:queryHint="Search services..."
+            app:searchIcon="@drawable/ic_search" />
+
+        -->

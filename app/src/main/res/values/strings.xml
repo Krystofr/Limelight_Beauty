@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Limelight•Beauty</string>
+    <string name="terms_and_conditions">You have read and agree to our Terms &amp; Conditions. </string>
+    <string name="desc">Get An Account With Us!</string>
+    <string name="web_client_id">846171750575-63h89ir89g4nlq39mn3mhvls8lms7asf.apps.googleusercontent.com</string>
+    <string name="facebook_app_id">3010300655721446</string>
+    <string name="fb_login_protocol_scheme">fb3010300655721446</string>
+    <string name="title_activity_homepage">L•L•Beauty</string>
+    <string name="title_home">Home</string>
+    <string name="title_services">Services</string>
+    <string name="title_cart">Cart</string>
+    <string name="title_account">Account</string>
+
+    <string name="search_hint">Search</string>
+    <string name="title_activity_colored">ColoredActivity</string>
+    <string name="title_activity_default">DefaultActivity</string>
+    <string name="title_activity_voice">VoiceActivity</string>
+    <string name="title_activity_sticky">StickyActivity</string>
+    <string name="title_activity_tab">TabActivity</string>
+    <string name="title_activity_input_type">InputTypeActivity</string>
+    <string name="action_settings">Settings</string>
+</resources>
